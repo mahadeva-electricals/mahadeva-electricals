@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mahadeva Electrical & Plumbing Works in Plachery. Expert electrical, plumbing, gypsum, CCTV, and core cutting works. 24/7 service with a 2-year warranty.">
+    <meta name="keywords" content="Electrical works Plachery, Plumbing works Plachery, Gypsum Works, CCTV Works, Core Cutting, Concrete Cutting, nearby electrician, 24 hours plumber">
+    <meta name="author" content="Mahadeva Works">
+    
+    <title>Mahadeva Electrical & Plumbing Works | Plachery</title>
+
+    <!-- Load Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        /* Import Professional Elegant Font for Tagline */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&display=swap');
+        /* Import Malayalam Font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700&display=swap');
+
+        /* Dark Mode Color Palette */
+        :root {
+            --bg-color: #050507; 
+            --glass-bg: rgba(25, 30, 45, 0.65); 
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #3b82f6;
+            --accent-gold: #fbbf24;
+        }
+
+        /* General Styling */
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: var(--text-main); 
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Particle Background Container */
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100vh; 
+            top: 0; 
+            left: 0; 
+            z-index: -1; 
+            background-color: var(--bg-color);
+        }
+
+        /* Main Content Container */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            position: relative; 
+            z-index: 1; 
+            flex: 1;
+        }
+
+        /* Header / Logo Section */
+        header { 
+            text-align: center; 
+            padding: 50px 20px 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-logo {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 25px rgba(59, 130, 246, 0.2));
+            margin-bottom: 5px;
+        }
+
+        /* Professional Taglines */
+        .tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            text-align: center;
+            max-width: 800px;
+            background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0px 4px 15px rgba(252, 246, 186, 0.15);
+        }
+        
+        .ml-tagline {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Glassmorphism Sections */
+        section { 
+            background: var(--glass-bg); 
+            padding: 40px; 
+            border-radius: 16px; 
+            margin: 40px 0; 
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            backdrop-filter: blur(10px);
+        }
+        h3 { 
+            text-align: center; 
+            color: var(--text-main); 
+            font-size: 2.2rem; 
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 10px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-header { text-align: center; margin-bottom: 30px; }
+
+        /* Grid Layouts */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+            gap: 25px; 
+        }
+
+        /* Cards & Images */
+        .card { 
+            background: rgba(0, 0, 0, 0.4); 
+            border: 1px solid var(--glass-border); 
+            border-radius: 12px; 
+            text-align: center; 
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .service-title {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            letter-spacing: 0.5px;
+        }
+        
+        /* Learn More Links */
+        .learn-more {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: var(--accent-blue);
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .learn-more:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        .service-card img {
+            height: 200px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(18, 22, 33, 0.85); 
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .contact-header-img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 8px; 
+        }
+        .contact-info-box {
+            background: rgba(10, 13, 20, 0.95); 
+            border-radius: 12px;
+            padding: 35px 40px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .contact-info-box p { 
+            margin: 18px 0; 
+            font-size: 1.25rem;
+            color: #f1f5f9;
+        }
+        .contact-info-box a { 
+            color: #3b82f6; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: color 0.3s; 
+        }
+        .contact-info-box a:hover { color: #60a5fa; }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn { 
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(37, 211, 102, 0.1);
+            color: #25D366 !important; 
+            border: 1px solid #25D366; 
+            padding: 12px 35px; 
+            text-decoration: none; 
+            border-radius: 40px; 
+            font-weight: bold; 
+            font-size: 1.15rem;
+            margin-top: 25px; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.1);
+        }
+        .whatsapp-btn:hover { 
+            background: #25D366; 
+            color: #121212 !important; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+        .whatsapp-btn svg { fill: currentColor; width: 24px; height: 24px; transition: fill 0.3s; }
+
+        /* Modals (Pop-ups) Styles */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 9999; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); 
+            backdrop-filter: blur(8px); 
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            overflow-y: auto;
+        }
+        
+        /* Specific Styles for the Text Info Modal */
+        .text-content {
+            background: rgba(18, 22, 33, 0.95);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f1f5f9;
+            max-width: 700px; 
+            position: relative;
+        }
+        .text-content h2 {
+            color: var(--accent-gold);
+            margin-top: 0;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.4);
+            padding-bottom: 15px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .text-content ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .text-content li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        /* Malayalam Text Styling */
+        .ml-text {
+            border-top: 1px dashed rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .ml-text li {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            color: #e2e8f0; 
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f5f9;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10000;
+        }
+        .text-content .close-modal {
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+        }
+        .close-modal:hover { color: var(--accent-blue); }
+
+        /* -------------------------------------
+           Footer & Credit Section
+           ------------------------------------- */
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .credit {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0.65rem; /* Extremely small text */
+            color: rgba(255, 255, 255, 0.15); /* Low opacity, barely noticeable */
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .credit a {
+            color: rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .credit a:hover {
+            color: var(--text-muted);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .main-logo { max-width: 90%; }
+            .tagline { font-size: 1.15rem; padding: 0 15px; }
+            .ml-tagline { font-size: 1.15rem; }
+            section { padding: 25px 15px; }
+            h3 { font-size: 1.8rem; }
+            .contact-section { padding: 25px 15px; }
+            .contact-info-box { padding: 20px; }
+            .contact-info-box p { font-size: 1.1rem; }
+            .close-modal { top: 10px; right: 20px; font-size: 35px; }
+            .text-content { padding: 30px 20px; }
+            .text-content h2 { font-size: 1.6rem; }
+            .text-content li, .ml-text li { font-size: 1rem; }
+            
+            .credit {
+                position: static;
+                text-align: center;
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Interactive Spiderweb Background -->
+    <div id="particles-js"></div>
+
+    <!-- The Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal close-img-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- The Text Info Modal (For Explaining Services in English & Malayalam) -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content text-content">
+            <span class="close-modal close-info-modal">&times;</span>
+            <h2 id="info-title">Service Title</h2>
+            <div id="info-desc"></div>
+            <div id="info-desc-ml" class="ml-text"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img src="Mahadeva Electrical & Plumbing Works logo.png" alt="Mahadeva Electrical & Plumbing Works" class="main-logo">
+            <p class="tagline">"All types of electrical and plumbing works are executed responsibly at reasonable rates."</p>
+        </header>
+
+        <!-- Guarantee Section -->
+        <section>
+            <div class="section-header">
+                <h3>Our Guarantees</h3>
+            </div>
+            <div class="grid">
+                <div class="card"><img src="24 Hours Service Available.png" alt="24 Hours Service Available"></div>
+                <div class="card"><img src="2 Years Free Maintenance.png" alt="2 Years Free Maintenance"></div>
+                
+                <!-- B Class License -->
+                <div class="card">
+                    <img src="B Class License Supervisor.png" alt="B Class License Supervisor">
+                    <div class="service-title">B Class Supervisor</div>
+                    <div class="learn-more" 
+                         data-title="B Class License Supervisor" 
+                         data-desc="<ul><li>Oversees and supervises all electrical installations.</li><li>Legally authorized to handle medium voltage electrical works up to 650 volts.</li><li>Prepares accurate electrical plans and designs for large homes and commercial buildings.</li><li>Ensures all work executed by wiremen complies with strict safety standards.</li><li>Leads the safe installation of 3-phase connections and generators.</li><li>Inspects completed electrical wiring and prepares necessary test reports.</li><li>Calculates building electrical loads and recommends appropriate safety features.</li><li>Authorized to handle official electrical filings and obtain approvals from bodies like KSEB.</li></ul>"
+                         data-desc-ml="<ul><li>ഇലക്ട്രിക്കൽ ജോലികളുടെ മേൽനോട്ടം വഹിക്കുക എന്നത് ഇവരുടെ പ്രധാന ചുമതലയാണ്.</li><li>പരമാവധി 650 വോൾട്ട് വരെയുള്ള മീഡിയം വോൾട്ടേജ് ഇലക്ട്രിക്കൽ ജോലികൾ ചെയ്യാൻ ഇവർക്ക് നിയമപരമായ അനുമതിയുണ്ട്.</li><li>വലിയ വീടുകളുടെയും വാണിജ്യ സ്ഥാപനങ്ങളുടെയും ഇലക്ട്രിക്കൽ പ്ലാനുകളും ഡിസൈനുകളും ഇവർ തയ്യാറാക്കുന്നു.</li><li>വയർമാൻമാർ ചെയ്യുന്ന ജോലികൾ കൃത്യമായ സുരക്ഷാ മാനദണ്ഡങ്ങൾ പാലിച്ചാണോ എന്ന് ഇവർ പരിശോധിച്ച് ഉറപ്പുവരുത്തുന്നു.</li><li>ത്രീ ഫേസ് കണക്ഷനുകളും ജനറേറ്ററുകളും സുരക്ഷിതമായി കെട്ടിടങ്ങളിൽ സ്ഥാപിക്കുന്നതിന് ഇവർ നേതൃത്വം നൽകുന്നു.</li><li>ഇലക്ട്രിക്കൽ വയറിംഗ് പൂർത്തിയായ ശേഷം അവ കൃത്യമായി പരിശോധിച്ച് ടെസ്റ്റ് റിപ്പോർട്ടുകൾ തയ്യാറാക്കുന്നത് ഇവരാണ്.</li><li>കെട്ടിടങ്ങളിലെ ലോഡ് കണക്കുകൂട്ടലുകൾ നടത്തുകയും അതിനനുസരിച്ചുള്ള സുരക്ഷാ ക്രമീകരണങ്ങൾ നിർദ്ദേശിക്കുകയും ചെയ്യുന്നു.</li><li>കെ.എസ്.ഇ.ബി പോലെയുള്ള ഔദ്യോഗിക ബോർഡുകളിൽ ഇലക്ട്രിക്കൽ ഫയലിംഗുകൾ നടത്തുന്നതിനും അനുമതി വാങ്ങുന്നതിനും ഇവർക്ക് അധികാരമുണ്ട്.</li></ul>">Read Details &rarr;</div>
+                </div>
+                
+                <!-- Wireman Permit -->
+                <div class="card">
+                    <img src="Wireman Permit Electricians.png" alt="Wireman Permit Electricians">
+                    <div class="service-title">Wireman Permit</div>
+                    <div class="learn-more" 
+                         data-title="Wireman Permit Electrician" 
+                         data-desc="<ul><li>Directly executes and handles all electrical wiring work.</li><li>Legally authorized to handle single-phase connections up to 250 volts in homes.</li><li>Performs primary tasks like wall cutting and the installation of pipes and junction boxes.</li><li>Pulls wires through conduits and properly connects them to the main distribution board.</li><li>Accurately installs devices like switches, sockets, light fixtures, and ceiling fans.</li><li>Installs essential safety switches such as MCBs and ELCBs on the main board.</li><li>Troubleshoots and repairs wiring faults, and replaces damaged electrical components.</li><li>Properly configures earthing systems to ensure the absolute safety of the building.</li></ul>"
+                         data-desc-ml="<ul><li>ഇലക്ട്രിക്കൽ വയറിംഗ് നേരിട്ട് ചെയ്യുക എന്നത് ഇവരുടെ പ്രധാന ചുമതലയാണ്.</li><li>വീടുകളിലെ സിംഗിൾ ഫേസ് കണക്ഷനുകളിൽ പരമാവധി 250 വോൾട്ട് വരെയുള്ള ജോലികൾ ചെയ്യാൻ ഇവർക്ക് നിയമപരമായ അനുമതിയുണ്ട്.</li><li>ചുവരുകൾ വെട്ടി പൈപ്പുകളും ബോക്സുകളും സ്ഥാപിക്കുന്ന പ്രാഥമിക ജോലികൾ ഇവർ ചെയ്യുന്നു.</li><li>പൈപ്പുകളിലൂടെ വയറുകൾ വലിക്കുന്നതും അവ മെയിൻ ബോർഡിലേക്ക് ബന്ധിപ്പിക്കുന്നതും ഇവരുടെ ജോലിയാണ്.</li><li>സ്വിച്ചുകൾ, സോക്കറ്റുകൾ, ലൈറ്റുകൾ, ഫാനുകൾ തുടങ്ങിയ ഉപകരണങ്ങൾ ഇവർ കൃത്യമായി ഘടിപ്പിക്കുന്നു.</li><li>എം.സി.ബി, ഇ.എൽ.സി.ബി തുടങ്ങിയ സുരക്ഷാ സ്വിച്ചുകൾ മെയിൻ ബോർഡിൽ സ്ഥാപിക്കുന്നത് ഇവരാണ്.</li><li>വയറിംഗിലെ തകരാറുകൾ പരിഹരിക്കുകയും കേടായ സ്വിച്ചുകൾ മാറ്റിസ്ഥാപിക്കുകയും ചെയ്യുന്നു.</li><li>കെട്ടിടങ്ങളുടെ സുരക്ഷയ്ക്കായി എർത്തിംഗ് സംവിധാനം കൃത്യമായി ഒരുക്കുന്നതും ഇവരുടെ ചുമതലയാണ്.</li></ul>">Read Details &rarr;</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section>
+            <div class="section-header">
+                <h3>Expert Services</h3>
+            </div>
+            <div class="grid">
+                <div class="card service-card">
+                    <img src="Gypsum Works.png" alt="Gypsum Works">
+                    <div class="service-title">Gypsum Works</div>
+                    <div class="learn-more" 
+                         data-title="Gypsum Works" 
+                         data-desc="<ul><li>Gypsum works involve the professional installation of false ceilings and drywalls using high-quality gypsum boards.</li><li>Used to enhance the modern interiors of both residential homes and commercial buildings.</li><li>Provides excellent thermal insulation to effectively reduce heat inside rooms.</li><li>Acts as an effective soundproofing barrier against outside noise.</li><li>Delivers a perfectly smooth, aesthetically pleasing, and highly attractive finish to interiors.</li></ul>"
+                         data-desc-ml="<ul><li>ജിപ്സം വർക്കുകൾ എന്നാൽ ഉയർന്ന നിലവാരമുള്ള ജിപ്സം ബോർഡുകൾ ഉപയോഗിച്ച് ഫോൾസ് സീലിംഗുകളും ഡ്രൈ വാളുകളും പ്രൊഫഷണൽ രീതിയിൽ ഘടിപ്പിക്കുന്ന പ്രക്രിയയാണ്.</li><li>ഇത് ആധുനിക വീടുകൾക്കും വാണിജ്യ കെട്ടിടങ്ങളുടെയും ഉൾഭാഗങ്ങൾക്ക് ഉപയോഗിക്കുന്നു.</li><li>ഇത് മുറികൾക്കുള്ളിൽ മികച്ച രീതിയിൽ ചൂട് കുറയ്ക്കാൻ സഹായിക്കുന്നു.</li><li>ഇത് പുറത്തുനിന്നുള്ള ശബ്ദത്തെ ഫലപ്രദമായി പ്രതിരോധിക്കുന്നു.</li><li>ഇത് കെട്ടിടങ്ങളുടെ ഉൾഭാഗത്തിന് തികച്ചും മിനുസമാർന്നതും ആകർഷകവുമായ രൂപം നൽകുന്നു.</li></ul>">Learn More &rarr;</div>
+                </div>
+                
+                <div class="card service-card">
+                    <img src="CCTV Works.png" alt="CCTV Works">
+                    <div class="service-title">CCTV Installation</div>
+                    <div class="learn-more" 
+                         data-title="CCTV Installation" 
+                         data-desc="<ul><li>We ensure top-tier security systems through the professional installation of CCTV cameras.</li><li>We accurately set up high-definition cameras and highly reliable recording systems.</li><li>Configured to provide convenient real-time mobile remote-viewing access from anywhere.</li><li>Ensures that your property and business establishments remain monitored and safe 24 hours a day.</li></ul>"
+                         data-desc-ml="<ul><li>സിസിടിവി ക്യാമറകൾ പ്രൊഫഷണൽ രീതിയിൽ ഘടിപ്പിച്ചുകൊണ്ട് മികച്ച സുരക്ഷാ സംവിധാനങ്ങൾ ഞങ്ങൾ ഉറപ്പാക്കുന്നു.</li><li>ഉയർന്ന വ്യക്തതയുള്ള ക്യാമറകളും റെക്കോർഡിംഗ് സിസ്റ്റങ്ങളും ഞങ്ങൾ കൃത്യതയോടെ സ്ഥാപിക്കുന്നു.</li><li>മൊബൈൽ ഫോണിലൂടെ എവിടെയിരുന്നും തത്സമയം ദൃശ്യങ്ങൾ കാണാനുള്ള സൗകര്യം ക്രമീകരിച്ചു നൽകുന്നു.</li><li>ഇത് നിങ്ങളുടെ വീടും സ്ഥാപനങ്ങളും ഇരുപത്തിനാല് മണിക്കൂറും സുരക്ഷിതമായി നിരീക്ഷിക്കാൻ സഹായിക്കുന്നു.</li></ul>">Learn More &rarr;</div>
+                </div>
+                
+                <div class="card service-card">
+                    <img src="Core Cutting.png" alt="Core Cutting">
+                    <div class="service-title">Core Cutting</div>
+                    <div class="learn-more" 
+                         data-title="Core Cutting" 
+                         data-desc="<ul><li>Core cutting is a highly precise drilling technique used to create perfectly round holes in thick concrete walls and floors.</li><li>This specialized service is essential for routing plumbing pipes, electrical conduits, and HVAC ventilation systems.</li><li>It is executed with absolute safety, completely avoiding any damage to the surrounding building structure.</li></ul>"
+                         data-desc-ml="<ul><li>കോർ കട്ടിംഗ് എന്നത് കട്ടിയുള്ള കോൺക്രീറ്റ് ചുവരുകളിലും തറകളിലും തികച്ചും വൃത്താകൃതിയിലുള്ള ദ്വാരങ്ങൾ ഉണ്ടാക്കാൻ ഉപയോഗിക്കുന്ന വളരെ കൃത്യതയേറിയ ഒരു ഡ്രില്ലിംഗ് രീതിയാണ്.</li><li>പ്ലംബിംഗ് പൈപ്പുകൾ, ഇലക്ട്രിക്കൽ വയറിംഗുകൾ, എയർ കണ്ടീഷണർ വെന്റിലേഷൻ സംവിധാനങ്ങൾ എന്നിവ കൃത്യമായി കടത്തിവിടാൻ ഈ പ്രത്യേക സേവനം അത്യാവശ്യമാണ്.</li><li>കെട്ടിടത്തിന്റെ നിലവിലുള്ള ഘടനയ്ക്ക് യാതൊരുവിധ കേടുപാടുകളും വരുത്താതെ തികച്ചും സുരക്ഷിതമായിട്ടാണ് ഇത് ചെയ്യുന്നത്.</li></ul>">Learn More &rarr;</div>
+                </div>
+                
+                <div class="card service-card">
+                    <img src="Concrete Cutting.png" alt="Concrete Cutting">
+                    <div class="service-title">Concrete Cutting</div>
+                    <div class="learn-more" 
+                         data-title="Concrete Cutting" 
+                         data-desc="<ul><li>Concrete cutting involves the controlled sawing, drilling, and removal of concrete in exact dimensions using advanced machinery.</li><li>Utilized for major structural modifications, creating door or window openings, and deep trenching.</li><li>We ensure accurate cuts performed with strict dust control during the construction process.</li></ul>"
+                         data-desc-ml="<ul><li>കോൺക്രീറ്റ് കട്ടിംഗ് എന്നത് അത്യാധുനിക യന്ത്രങ്ങൾ ഉപയോഗിച്ച് കോൺക്രീറ്റ് കൃത്യമായ അളവിൽ മുറിക്കുകയോ തുരക്കുകയോ നീക്കം ചെയ്യുകയോ ചെയ്യുന്ന രീതിയാണ്.</li><li>കെട്ടിടങ്ങളുടെ ഘടനയിൽ വലിയ മാറ്റങ്ങൾ വരുത്തുന്നതിനും, വാതിലുകൾക്കോ ജനലുകൾക്കോ ഉള്ള വഴികൾ വെട്ടുന്നതിനും, ആഴത്തിലുള്ള കിടങ്ങുകൾ എടുക്കുന്നതിനും ഇത് ഉപയോഗിക്കുന്നു.</li><li>നിർമ്മാണ സമയത്ത് പൊടിപടലങ്ങൾ നിയന്ത്രിച്ചുകൊണ്ട് തികച്ചും കൃത്യതയോടെയാണ് ഞങ്ങൾ ഇത് ചെയ്ത് നൽകുന്നത്.</li></ul>">Learn More &rarr;</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <img src="Get In Touch.png" alt="Get In Touch" class="contact-header-img">
+            
+            <div class="contact-info-box">
+                <p><strong>Manager:</strong> SYAMRAJ</p>
+                <p><strong>Mobile:</strong> <a href="tel:+918593958545">8593 958 545</a> &nbsp;|&nbsp; <a href="tel:+918921963874">8921 963 874</a></p>
+                <p><strong>Email:</strong> <a href="mailto:syamplachery@gmail.com">syamplachery@gmail.com</a></p>
+                
+                <a href="https://wa.me/918593958545?text=Hello%20Mahadeva%20Works%2C%20I%20am%20reaching%20out%20to%20request%20a%20professional%20consultation%20regarding%20your%20services.%20Could%20we%20discuss%20my%20requirements%3F" class="whatsapp-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                    </svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer & Credit -->
+    <footer>
+        <p class="tagline ml-tagline">"എല്ലാവിധ ഇലക്ട്രിക്കൽ വർക്കുകളും പ്ലംബിംഗ് വർക്കുകളും ഉത്തരവാദിത്തത്തോടുകൂടി മിതമായ നിരക്കിൽ ചെയ്തു കൊടുക്കപ്പെടും."</p>
+        <p class="credit">Website by <a href="https://athulpec.github.io/athulj-portfolio/" target="_blank">Athul J</a></p>
+    </footer>
+
+    <script>
+        // --- 1. Image Pop-up (Modal) Logic ---
+        const imageModal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
+        const images = document.querySelectorAll(".card img");
+        const closeImgModal = document.querySelector(".close-img-modal");
+
+        images.forEach(img => {
+            img.onclick = function() {
+                imageModal.style.display = "flex"; 
+                modalImg.src = this.src;      
+            }
+        });
+
+        closeImgModal.onclick = function() { imageModal.style.display = "none"; }
+        imageModal.onclick = function(event) {
+            if (event.target !== modalImg) { imageModal.style.display = "none"; }
+        }
+
+        // --- 2. Text Info Pop-up (Modal) Logic (Bilingual) ---
+        const infoModal = document.getElementById("info-modal");
+        const infoTitle = document.getElementById("info-title");
+        const infoDesc = document.getElementById("info-desc");
+        const infoDescMl = document.getElementById("info-desc-ml");
+        const learnMoreLinks = document.querySelectorAll(".learn-more");
+        const closeInfoModal = document.querySelector(".close-info-modal");
+
+        learnMoreLinks.forEach(link => {
+            link.onclick = function() {
+                infoTitle.innerHTML = this.getAttribute("data-title");
+                infoDesc.innerHTML = this.getAttribute("data-desc");
+                
+                const mlText = this.getAttribute("data-desc-ml");
+                if(mlText) {
+                    infoDescMl.innerHTML = mlText;
+                    infoDescMl.style.display = "block";
+                } else {
+                    infoDescMl.style.display = "none";
+                }
+                
+                infoModal.style.display = "flex"; 
+            }
+        });
+
+        closeInfoModal.onclick = function() { infoModal.style.display = "none"; }
+        infoModal.onclick = function(event) {
+            if (event.target === infoModal) { infoModal.style.display = "none"; }
+        }
+
+        // --- 3. Interactive Spiderweb Particles Logic ---
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 90, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#3b82f6" }, 
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 160, 
+                    "color": "#3b82f6", 
+                    "opacity": 0.2, 
+                    "width": 1.2
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2.5, 
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { 
+                        "distance": 250, 
+                        "line_linked": { "opacity": 0.9 }
+                    },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
